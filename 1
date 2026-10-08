@@ -1,0 +1,115 @@
+// Dart Basics - Learning Objectives
+
+// A simple class
+class Student {
+  String name;
+  int age;
+  double cgpa;
+
+  Student(this.name, this.age, this.cgpa);
+
+  void displayDetails() {
+    print("Name: $name");
+    print("Age: $age");
+    print("CGPA: $cgpa");
+  }
+}
+
+// Function
+int addNumbers(int a, int b) {
+  return a + b;
+}
+
+void main() {
+  // -----------------------------
+  // 1. Variables and Data Types
+  // -----------------------------
+
+  String name = "Karthik";
+  int age = 20;
+  double percentage = 75.5;
+  bool isStudent = true;
+
+  print("Name: $name");
+  print("Age: $age");
+  print("Percentage: $percentage");
+  print("Is Student: $isStudent");
+
+  // -----------------------------
+  // 2. var
+  // -----------------------------
+
+  var college = "NEC";
+
+  print("College: $college");
+
+  // -----------------------------
+  // 3. final
+  // -----------------------------
+
+  final course = "BTech CSE";
+
+  print("Course: $course");
+
+  // final cannot be changed after assignment.
+  // course = "BCA"; // ERROR
+
+  // -----------------------------
+  // 4. const
+  // -----------------------------
+
+  const pi = 3.14159;
+
+  print("Value of PI: $pi");
+
+  // const is a compile-time constant.
+  // pi = 3.14; // ERROR
+
+  // -----------------------------
+  // 5. String Interpolation
+  // -----------------------------
+
+  print("My name is $name and I am $age years old.");
+
+  print("My college is $college.");
+
+  // Expressions can also be used
+  print("Next year I will be ${age + 1} years old.");
+
+  // -----------------------------
+  // 6. Function
+  // -----------------------------
+
+  int result = addNumbers(10, 20);
+
+  print("Addition result: $result");
+
+  // -----------------------------
+  // 7. Control Flow - if/else
+  // -----------------------------
+
+  if (age >= 18) {
+    print("$name is an adult.");
+  } else {
+    print("$name is a minor.");
+  }
+
+  // -----------------------------
+  // 8. Control Flow - for loop
+  // -----------------------------
+
+  print("Numbers from 1 to 5:");
+
+  for (int i = 1; i <= 5; i++) {
+    print(i);
+  }
+
+  // -----------------------------
+  // 9. Class and Object
+  // -----------------------------
+
+  Student student = Student("Karthik", 20, 7.02);
+
+  print("\nStudent Details:");
+  student.displayDetails();
+}
